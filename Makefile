@@ -17,8 +17,12 @@ cron-status :
 start-cron:
 	service cron start
 
-list-cron:
+edit-cron:
 	crontab -e
 
 install-nano:
 	apt-get update && apt-get -y install nano
+	export EDITOR=nano
+
+list-cron:
+	crontab -l

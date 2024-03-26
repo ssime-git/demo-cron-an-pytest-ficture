@@ -40,3 +40,35 @@ To test the code inside a container :
 make build
 # or pytest
 ```
+
+## Run cron inside Docker
+
+Source : https://stackoverflow.com/questions/37458287/how-to-run-a-cron-job-inside-a-docker-container
+
+cron to create :
+
+```sh
+# get into the container
+make enter-container
+
+# start cron
+make start-cron
+
+# check status
+make cron-status
+
+# create a file
+touch log.txt
+
+# open crontab
+crontab -e
+
+# add this line
+* * * * * echo "this is a test" >> /app/log.txt
+
+# make sure the cron is activated
+service cron status
+
+# if not activated run
+#service cron start
+```
