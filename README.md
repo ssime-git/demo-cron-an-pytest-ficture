@@ -72,3 +72,5 @@ service cron status
 # if not activated run
 #service cron start
 ```
+
+__NOTE__: cron can be created using python as well. I will leave you to research about it.
