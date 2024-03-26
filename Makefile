@@ -1,12 +1,12 @@
 build:
-	docker build -t my-python-app .
-	docker run -it --rm my-python-app
+	docker build -t my-python-app2 .
+	docker run -it --rm my-python-app2
 
 run-test:
 	pytest
 
 enter-container:
-	docker run -it --rm my-python-app bash
+	docker run -it --rm my-python-app2 bash
 
 install-cron:
 	apt-get update && apt-get -y install cron
